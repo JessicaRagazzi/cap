@@ -1,0 +1,27 @@
+body{
+
+}
+
+h1{
+    color:blue
+}
+
+a{
+    margin-left: 50px;
+    background-color: aquamarine;
+    color: blue;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+a:hover {
+    color: blue;
+    background-color: azure;
+}
+
+li:hover{
+    color: blue;
+    list-style-type: disc;
+}
