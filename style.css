@@ -25,3 +25,8 @@ li:hover{
     color: blue;
     list-style-type: disc;
 }
+
+.paragrafos{
+    color:green;
+    border: 1px red;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>   </title>
+    <link rel="stylesheet" href="cadastrostyle.css">
+  </head>
+    <body>
+        <div>
+            <input type="text" id="nome" placeholder="Informe seu nome"/>
+            <input type="text" id="sobrenome" placeholder="Informe seu sobrenome"/>
+            <input type="number" id="idade" placeholder="Informe sua idade"/>
+            <button onclick="ola()">Mostrar Mensagem</button>
+            <hr />
+            <label id="nomeCompleto"></label>
+        </div>
+
+        <script>
+            function ola(){
+                //DOM Document Object Model
+                var nome = document.getElementById("nome")
+                if(nome.value == ""){
+                    document.getElementById("nomeCompleto").innerHTML = "Informe o nome";
+                    nome.focus();
+                    return;
+                }
+
+                var sobrenome = document.getElementById("sobrenome")
+                if(sobrenome.value == ""){
+                    document.getElementById("nomeCompleto").innerHTML = "Informe o sobrenome";
+                    sobrenome.focus();
+                    return;
+                }
+
+                var idade = document.getElementById("idade").value;
+                if(idade == ""){
+                    document.getElementById("nomeCompleto").innerHTML = "Informe o idade";
+                    document.getElementById("idade").focus();
+                    return;
+                }
+
+                var msg = nome.value + " " + sobrenome.value + ", você tem " + idade + " anos portanto você é maior de idade";
+                
+                if(idade <18){
+                    msg = nome.value + " " + sobrenome.value + ", você tem " + idade + " anos portanto você é menor de idade";
+                }
+                    
+                document.getElementById("nomeCompleto").innerHTML = msg;
+            }
+        </script>
+    </body>
+</html>
