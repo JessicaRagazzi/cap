@@ -1,0 +1,33 @@
+{
+    "contatos":[
+        {
+            "id":1,
+            "nome": "José da Silva",
+            "fone": "3395-1798",
+            "email": "jose@gmail.com",
+            "endereço": "Rua das Flores, 52"
+        },
+        {
+            "id":2,
+            "nome": "Maria da Silva",
+            "fone": "3395-1798",
+            "email": "maria@gmail.com",
+            "endereço": "Avenida Afonso Pena, 32"
+        },
+        {
+            "id":3,
+            "nome": "Pedro de Souza",
+            "fone": "3358-1896",
+            "email": "pedro@gmail.com",
+            "endereço": "Rua Rui Barbosa, 255"
+        },
+
+        {
+            "id":4,
+            "nome": "Joana Magalhães",
+            "fone": "3365-8858",
+            "email": "joana@gmail.com",
+            "endereço": "Avenida 14 de Julho, 36"
+        }
+    ]
+}

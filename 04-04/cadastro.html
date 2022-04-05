@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/style.css"> 
+    <script src="scripts/scriptscadastro.js"></script>
+
+    <title>Cadastro</title>
+</head>
+<body>
+    <div>
+        <form action="#" method="POST">
+            <label for="fNome">Nome</label>
+            <input type="text" id="fNome" placeholder="Informe nome"/>
+            <input type="number" placeholder="Informe idade"/>
+            <input type="email" placeholder="Informe email"/>
+            <input type="date"/>
+            <input type="datetime-local"/>
+
+            <ol>
+                <li>
+                    <input type="checkbox" id="livros">
+                    <label for="livros">Livros</label>
+                </li>
+                <li>
+                    <input type="checkbox">Musicas</input>
+                </li>
+            </ol>
+
+            <input type="checkbox" id="comida"/>
+            <label for="comida">Comida</label>
+
+            <input type="radio" name="genero" checked>Feminino</input>
+            <input type="radio" name="genero">Masculino</input>
+            <input type="password" placeholder="Informe sua senha" required/>
+            <textarea cols="50" rows="10" style="resize:none;" ></textarea>
+            <select>
+                <option>Um</option>
+                <option>Dois</option>
+                <option>Três</option>
+            </select>
+
+            <select>
+                <option value="1">Açougue</option>
+                <option value="2">Frutas</option>
+                <option value="3">Verduras</option>
+            </select>
+
+            <img src="images/114-1146569_mario-mushroom-super-mario-mushroom-hd-png-download.png" alt="" width="100px" height="100px" />
+            <input type="file" placeholder="Informe a imagem"/>
+        </form>
+        <button onclick="onSubmit()">Gravar</button>  
+    </div>       
+  
+</body>
+
+</html>
