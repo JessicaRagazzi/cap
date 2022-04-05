@@ -1,0 +1,18 @@
+body{
+    background-color: #F1F7ED;
+}
+
+div{
+    width: 500px;
+}
+
+input[type=text],
+input[type=number]{
+    width: 100%;
+    padding: 10px;
+}
+
+button{
+   
+    width: 21%;
+}
