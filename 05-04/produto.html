@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/clientestyle.css"/>
     <title>Produtos</title>
 </head>
-<body>
+<body onload="loadCategoria()">
     <h1><i class="material-icons">local_offer</i> Produtos</h1>
     <div>
     <font face="Verdana"> 
@@ -33,13 +33,29 @@
         <label for=fornecedor">Fornecedor</label>
         <input type="text" id="fornecedor" placeholder="Informe o fornecedor"/>
         <label for="categoria">Selecione a categoria do produto</label>
-        <select>
-        
+        <select id="categorias">
+            <!--Carregado diretamente pela função display-->
         </select>
         
+        <script>
+            function loadCategoria(){
+                fetch("http://localhost:3000/categorias")
+                    .then(x => x.text())
+                    .then(cat => display(cat))
+            }
+
+            function display(scripts) {
+                let lista = JSON.parse(scripts)
+                var opt = ""
+                for (let ob in lista) {
+                    opt += "<option>" + lista[ob].nome + "</option>"
+                }
+                document.getElementById("categorias").innerHTML = opt;
+            }
+        </script>
         <button>Enviar</button>
         <button>Cancelar</button>
-        </font> <br />
+    </font> <br />
     </div>
 </body>
 </html>
