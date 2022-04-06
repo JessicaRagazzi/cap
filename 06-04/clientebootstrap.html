@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+        <a class="navbar-brand text-warning mt-3 h1" href="#">
+          <img src="logo.png" width="40" height="40" class="d-inline-block align-top mr-3" alt="">Página Teste        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link text-warning" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-warning" href="#">Teste</a>
+              </li>
+            </ul>
+            <div>
+                <button type="button" class="btn btn-warning my-2 my-sm-0">Login</button>
+            </div>
+          </div>
+      </nav>
+</header>
+<style>
+    .container{
+        padding: 30px;
+    }
+</style>
+<body class="bg-light">
+    <h1 class="text-center"><i class="material-icons container">mood</i>    Cliente</h1>
+
+<form>
+    <div>
+        <font face="Verdana"> 
+        <form action="#" method="POST">
+        <div class="container mb-3">
+
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Nome e sobrenome</span>
+                </div>
+                <input type="text" aria-label="First name" class="form-control">
+                <input type="text" aria-label="Last name" class="form-control">
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="telefone">Seu telefone</label>
+                <input type="number" class="form-control" id="telefone" placeholder="Seu telefone">
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Seu e-mail</label>
+                <input type="number" class="form-control" id="email" placeholder="Seu e-mail">
+            </div>
+            
+            <form> 
+                <label for="endereco">Seu Endereço</label>
+                <div class="form-row mb-3">
+                  <div class="col-7">
+                    <input type="text" class="form-control" placeholder="Cidade">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Estado">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="CEP">
+                  </div>
+                </div>
+            
+            
+            <label for="credito">Limite de Crédito</label>
+            <div class="input-group mb-3">
+                
+                <div class="input-group-prepend">
+                  <span class="input-group-text">R$</span>
+                </div>
+                <input type="number" class="form-control" aria-label="Quantia">
+                <div class="input-group-append">
+                  <span class="input-group-text">.00</span>
+                </div>
+              </div>
+
+              <div class="input-group mt-3 mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                </div>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                  <label class="custom-file-label" for="inputGroupFile01">Escolher arquivo</label>
+                </div>
+              </div>
+              <button onclick="onSubmit()">Enviar</button><button>Cancelar</button>
+            </div>
+            
+        </div>
+        </form>
+    </font> <br />
+    </div>
+</form>
+</body>
+</html>
