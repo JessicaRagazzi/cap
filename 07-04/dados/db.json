@@ -1,0 +1,28 @@
+{
+  "pessoas": [
+    {
+      "id": 1,
+      "nome": "João da Silva",
+      "telefone": "3365-5896",
+      "email": "joao@gmail.com"
+    },
+    {
+      "id": 2,
+      "nome": "Joana D'arc",
+      "telefone": "3565-2012",
+      "email": "joana@gmail.com"
+    },
+    {
+      "id": 3,
+      "nome": "Ana Cláudia Moraes",
+      "telefone": "9856-6932",
+      "email": "ana.c@gmail.com"
+    },
+    {
+      "nome": "Jéssica",
+      "telefone": "99625585",
+      "email": "jessica@gmail.com",
+      "id": 4
+    }
+  ]
+}
