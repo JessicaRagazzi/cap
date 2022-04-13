@@ -1,0 +1,24 @@
+{
+    "talentos": [
+        {
+            "id": 1,
+            "nome": "Fernanda",
+            "fone": "555-9274",
+            "email": "fernanda@email.com",
+            "profissao": "Design",
+            "cidade": "Salvador",
+            "estado": "Bahia",
+            "imagem": "./imagens/menina.jpg"
+        },
+        {
+            "id": 2,
+            "nome": "Marcos",
+            "fone": "555-0417",
+            "email": "marcos@email.com",
+            "profissao": "Desenvolvedor",
+            "cidade": "Curitiba",
+            "estado": "Paraná",
+            "imagem": "./imagens/menina.jpg"
+        }
+    ]
+}
