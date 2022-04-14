@@ -29,12 +29,16 @@
         h1 {
             color: lightcoral;
         }
+
+        label {
+            color: lightcoral;
+        }
     </style>
 </head>
 
 <body onload="pegarParametro()">
     <div class="container my-5 py-3">
-        <h1>Editar Contato</h1>
+        <h1>Editar Cadastro</h1>
         <div class="entrada">
             <input class="form-control" value="" type="text" disabled>
             <input class="form-control" type="text">
@@ -42,9 +46,41 @@
             <input class="form-control" type="email">
             <input class="form-control" type="text">
             <input class="form-control" type="text">
-            <input class="form-control" type="text">
+            <select class="form-select" id="estado" required>
+                <option value="" selected>Selecione o seu estado:</option>
+                <option value="AC">Acre - AC</option>
+                <option value="AL">Alagoas - AL</option>
+                <option value="AP">Amapá - AP</option>
+                <option value="AM">Amazonas - AM</option>
+                <option value="BA">Bahia - BA</option>
+                <option value="CE">Ceará - CE</option>
+                <option value="DF">Distrito Federal - DF</option>
+                <option value="ES">Espírito Santo - ES</option>
+                <option value="GO">Goiás - GO</option>
+                <option value="MA">Maranhão - MA</option>
+                <option value="MT">Mato Grosso - MT</option>
+                <option value="MS">Mato Grosso do Sul - MS</option>
+                <option value="MG">Minas Gerais - MG</option>
+                <option value="PA">Pará - PA</option>
+                <option value="PB">Paraíba - PB</option>
+                <option value="PR">Paraná - PR</option>
+                <option value="PE">Pernambuco - PE</option>
+                <option value="PI">Piauí - PI</option>
+                <option value="RJ">Rio de Janeiro - RJ</option>
+                <option value="RN">Rio Grande do Norte - RN</option>
+                <option value="RS">Rio Grande do Sul - RS</option>
+                <option value="RO">Rondônia - RO</option>
+                <option value="RR">Roraima - RR</option>
+                <option value="SC">Santa Catarina - SC</option>
+                <option value="SP">São Paulo - SP</option>
+                <option value="SE">Sergipe - SE</option>
+                <option value="TO">Tocantins - TO</option>
+            </select>
+            <label class="form-label mb-0 ms-1 fst-italic">Anexe sua foto:</label>
+            <input type="file" id="imagem" class="form-control" />
         </div>
 
+        <p></p>
 
         <div class="botoes mt-2">
             <button onclick="alterar()" class="salvar btn btn-primary">Alterar</button>
@@ -75,7 +111,8 @@
         document.getElementsByTagName("input")[3].value = obj.email
         document.getElementsByTagName("input")[4].value = obj.profissao
         document.getElementsByTagName("input")[5].value = obj.cidade
-        document.getElementsByTagName("input")[6].value = obj.estado
+        document.getElementsByTagName("select")[0].value = obj.estado
+        // document.getElementsByTagName("input")[6].value = obj.imagem
     }
 
     // ALTERAR
@@ -86,10 +123,11 @@
         var email = document.getElementsByTagName("input")[3].value
         var profissao = document.getElementsByTagName("input")[4].value
         var cidade = document.getElementsByTagName("input")[5].value
-        var estado = document.getElementsByTagName("input")[6].value
+        var estado = document.getElementsByTagName("select")[0].value
+        // var imagem = document.getElementsByTagName("input")[6].value
 
-        let obj = new Talento(id, nome, fone, email, profissao, cidade, estado)
-        obj.editar()
+        let obj = new Talento(id, nome, fone, email, profissao, cidade, estado, imagem)
+        obj.editar(retornar)
     }
 
     // CANCELAR
@@ -101,6 +139,11 @@
     function excluir() {
         let ob = new Talento();
         ob.deletar(document.getElementsByTagName("input")[0].value)
+    }
+
+    // RETORNAR
+    function retornar() {
+        window.history.back()
     }
 </script>
 

@@ -1,24 +1,74 @@
 {
-    "talentos": [
-        {
-            "id": 1,
-            "nome": "Fernanda",
-            "fone": "555-9274",
-            "email": "fernanda@email.com",
-            "profissao": "Design",
-            "cidade": "Salvador",
-            "estado": "Bahia",
-            "imagem": "./imagens/menina.jpg"
-        },
-        {
-            "id": 2,
-            "nome": "Marcos",
-            "fone": "555-0417",
-            "email": "marcos@email.com",
-            "profissao": "Desenvolvedor",
-            "cidade": "Curitiba",
-            "estado": "Paraná",
-            "imagem": "./imagens/menina.jpg"
-        }
-    ]
+  "talentos": [
+    {
+      "id": 1,
+      "nome": "Fernanda da Silva",
+      "fone": "3625-9274",
+      "email": "fernanda@gmail.com",
+      "profissao": "Design",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "imagem": "./imagens/menina.jpg"
+    },
+    {
+      "id": 2,
+      "nome": "Marcos",
+      "fone": "555-0417",
+      "email": "marcos@gmail.com",
+      "profissao": "Desenvolvedor",
+      "cidade": "Curitiba",
+      "estado": "PR",
+      "imagem": "./imagens/menina.jpg"
+    },
+    {
+      "id": 3,
+      "nome": "Luana",
+      "fone": "67 5896-6523",
+      "email": "luana@gmail.com",
+      "profissao": "Arquiteta",
+      "cidade": "Montes Claros",
+      "estado": "MG",
+      "imagem": "./imagens/menina.jpg"
+    },
+    {
+      "id": 4,
+      "nome": "Luciano",
+      "fone": "555-4726",
+      "email": "luciano@email.com",
+      "profissao": "Biologo",
+      "cidade": "Bonito",
+      "estado": "MS",
+      "imagem": "./imagens/menina.jpg"
+    },
+    {
+      "id": 5,
+      "nome": "Jéssica",
+      "fone": "65449849841",
+      "email": "jessica@gmail.com",
+      "profissao": "Design",
+      "cidade": "Campo Grande",
+      "estado": "MS",
+      "imagem": "./imagens/menina.jpg"
+    },
+    {
+      "id": 6,
+      "nome": "Joao",
+      "fone": "65 5854-5878",
+      "email": "joao@gmail.com",
+      "profissao": "Atendente",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "imagem": "./imagens/menina.jpg"
+    },
+    {
+      "id": 7,
+      "nome": "Thyara Nonato",
+      "fone": "48998043505",
+      "email": "thyaranonato@outlook.com",
+      "profissao": "Desenvolvedora",
+      "cidade": "Florianópolis",
+      "estado": "SC",
+      "imagem": ""
+    }
+  ]
 }
