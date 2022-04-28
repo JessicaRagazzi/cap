@@ -1,0 +1,38 @@
+<div class="mt-5 container">
+  <h2>Login de Usuários</h2>
+
+  <form #f="ngForm" (ngSubmit)="fazerLogin(f.value)">
+    <label class="form-label">Informe o usuário</label>
+    <input
+      required
+      class="form-control"
+      type="email"
+      #femail="ngModel"
+      ngModel
+      name="email"
+      placeholder="E-mail"
+    />
+    <div *ngIf="femail.invalid" class="ng-invalid">Informe seu e-mail</div>
+
+    <label class="form-label">Informe a senha</label>
+    <input
+      required
+      class="form-control"
+      type="password"
+      #fsenha="ngModel"
+      ngModel
+      name="senha"
+      placeholder="Senha"
+    />
+    <div *ngIf="fsenha.invalid" class="ng-invalid">Informe sua senha</div>
+
+    <button class="btn mt-3 btn-secondary">Login</button>
+  </form>
+  <a routerLink="/cadastroUsuario">Não é cadastrado?</a>
+
+  <p>
+    {{ usuarioConectado.perfil }}
+  </p>
+</div>
+
+<router-outlet></router-outlet>

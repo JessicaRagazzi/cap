@@ -1,0 +1,47 @@
+<div class="container mt-5">
+  <h2>Faça seu cadastro</h2>
+  <form #f="ngForm" (ngSubmit)="salvarUsuario(f.value)">
+    <label class="form-label" for="nome">Nome:</label>
+    <input
+      required
+      class="form-control"
+      type="text"
+      #fnome="ngModel"
+      ngModel
+      name="nome"
+      placeholder="Informe seu nome"
+    />
+    <div *ngIf="fnome.invalid" class="ng-invalid">Informe seu nome.</div>
+
+    <label class="form-label" for="email">E-mail:</label>
+    <input
+      required
+      class="form-control"
+      type="email"
+      #femail="ngModel"
+      ngModel
+      name="email"
+      placeholder="Informe seu e-mail"
+    />
+    <div *ngIf="femail.invalid" class="ng-invalid">Informe seu e-mail.</div>
+
+    <label class="form-label" for="senha">Crie sua senha:</label>
+    <input
+      required
+      minlength="5"
+      class="form-control"
+      type="password"
+      #fsenha="ngModel"
+      ngModel
+      name="senha"
+      placeholder="Crie sua senha"
+    />
+    <div *ngIf="fsenha.invalid" class="ng-invalid">Crie sua senha</div>
+
+    <button class="btn btn-secondary mt-3">Cadastrar</button>
+  </form>
+
+  <a routerLink="/login">Já tenho uma conta!</a>
+
+  <label>{{ msg }}</label>
+</div>

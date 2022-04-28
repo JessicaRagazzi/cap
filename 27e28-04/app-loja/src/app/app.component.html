@@ -1,0 +1,35 @@
+<nav class="container-fluid bg-info">
+  <a class="btn btn-secondary" routerLink=""
+    ><i class="align-middle material-icons">home</i></a
+  >
+
+  <a
+    *ngIf="userLogado.perfil == 'ADM'"
+    class="btn btn-secondary m-2"
+    routerLink="cadastroproduto"
+    >Cadastrar Produto</a
+  >
+  <a
+    *ngIf="userLogado.perfil == 'ADM'"
+    class="btn btn-secondary m-2"
+    routerLink="consultaproduto"
+    >Consultar Produto</a
+  >
+  <a
+    *ngIf="userLogado.perfil == 'ADM' || userLogado.perfil == 'USUARIO'"
+    class="btn btn-secondary m-2"
+    routerLink="carrinho"
+    >Carrinho</a
+  >
+  <a class="btn btn-secondary m-2" routerLink="cadastroUsuario">Cadastre-se</a>
+  <a *ngIf="!userLogado.email" class="btn btn-secondary m-2" routerLink="login"
+    >Login</a
+  >
+  <a *ngIf="userLogado.email" class="btn btn-secondary m-2" (click)="logout()"
+    >Logout</a
+  >
+  <label *ngIf="userLogado.email" class="bg-white rounded p-1"
+    >Olá, {{ userLogado.nome }}</label
+  >
+</nav>
+<router-outlet></router-outlet>

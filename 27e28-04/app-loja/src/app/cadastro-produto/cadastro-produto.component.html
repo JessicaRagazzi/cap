@@ -1,0 +1,57 @@
+<div class="mt-5 mb-3 container">
+  <h2>Cadastro de Produto</h2>
+  <form #f="ngForm" (ngSubmit)="gravar(f.value)">
+    <label class="form-label" for="nomeProduto">Produto</label>
+    <input required minlength="5" class="form-control" type="text" #fnome="ngModel" ngModel name="nomeProduto"
+      placeholder="Informe nome do produto" />
+    <div *ngIf="fnome.invalid" class="ng-invalid">
+      Informe a descrição do produto.
+    </div>
+
+    <label class="form-label" for="preco">Preço</label>
+    <input required class="form-control" type="text" #fpreco="ngModel" ngModel name="preco"
+      placeholder="Informe o preço" />
+    <div *ngIf="fpreco.invalid" class="ng-invalid">
+      Informe o preço do produto.
+    </div>
+    <label class="form-label" for="estoque">Quantidade de estoque</label>
+    <input required="" class="form-control" type="text" #festoque="ngModel" ngModel name="estoque"
+      placeholder="Informe o estoque" />
+    <div *ngIf="festoque.invalid" class="ng-invalid">
+      Informe a quantidade de estoque
+    </div>
+    <button class="btn btn-primary mt-3">Salvar</button>
+    <button (click)="limparMsg()" type="reset" class="btn btn-danger mt-3">
+      Cancelar
+    </button>
+  </form>
+  <label>{{ msg }}</label>
+</div>
+
+<div>
+  <table class="table">
+    <thead class="bg-primary" style="--bs-bg-opacity: .5">
+      <tr>
+        <th>Id</th>
+        <th>Descrição</th>
+        <th>Preço</th>
+        <th>Estoque</th>
+        <th>Edição</th>
+        <th>Excluir</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of produtos">
+        <td>{{ prod.id }}</td>
+        <td>{{ prod.descricao }}</td>
+        <td>{{ prod.preco }}</td>
+        <td>{{ prod.estoque }}</td>
+        <td>
+          <a [routerLink]="['/produtos', prod.id]"><i class="material-icons">mode_edit</i></a>
+        </td>
+        <td><a><i role="button" class="material-icons text-primary" (click)="excluir(prod.id)"> delete</i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
